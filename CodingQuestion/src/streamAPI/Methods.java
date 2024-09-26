@@ -2,6 +2,7 @@ package streamAPI;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -42,6 +43,17 @@ public class Methods {
 		  System.out.println(collect3);
 		  
 		  collect3.stream().forEach(System.out::println);
+		 
+		  System.out.println("-----------------------");
+		  // Sorted 
+		   list.stream().sorted().forEach(System.out::println);
+		   
+		   Integer integer = list.stream().min((x,y)->x.compareTo(y)).get();
+		   
+		   System.out.println("Minimum - " + integer );
+		     
+		   
+		  
 	}
 
 }
