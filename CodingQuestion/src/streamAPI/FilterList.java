@@ -23,9 +23,10 @@ public class FilterList {
 		  List<Integer> asList = Arrays.asList(23,567,12 ,677,24);
 		  
 		
-		  List<Integer> ansList =  list1.stream().filter(i->i%2==0).collect(Collectors.toList());
 		  
-		  System.out.println(ansList);
+		   List<Integer> collect = list1.stream().filter(i->i%2==0).collect(Collectors.toList());
+		  
+		  System.out.println(asList);
 	}
 
 }

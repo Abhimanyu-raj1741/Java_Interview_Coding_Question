@@ -2,7 +2,7 @@ package streamAPI;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class HighestNumber {
 
@@ -12,6 +12,9 @@ public class HighestNumber {
 		
 		Integer max = ls.stream().max((i,j)-> i.compareTo(j)).get();
 		
+		List<Integer> collect = ls.stream().filter(i->i>=8).collect(Collectors.toList());
+		
+		System.out.println(collect);
 		System.out.println(max);
 	}
    
