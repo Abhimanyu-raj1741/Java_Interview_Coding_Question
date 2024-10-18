@@ -24,6 +24,25 @@ public class Main {
 			lengthInter l1 = (str)-> str.length();
 			
 			System.out.println(l1.getLength("Abhimanyu Kumar"));
+			
+			// How to create Thread Using Lambda Expression 
+			
+			Runnable r1 = ()->{
+				
+				for(int i=0; i<=10 ;i++) {
+				System.out.println(" My Thread is Running "+i);
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				}
+			};
+			
+			Thread t1 = new Thread(r1);
+			
+			t1.start();
 			 
 	}
 	

@@ -24,6 +24,8 @@ public class FindDuplicateUsingJAVA7or8 {
 		
 		// Java 8 approach 
 	    list.stream().filter(num->!st.add(num)).forEach(System.out::println);
+	    
+	     
 		
 		
 	}
