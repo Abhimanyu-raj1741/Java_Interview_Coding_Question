@@ -35,8 +35,9 @@ public class StreamDemo {
 	    for(String s : collect) {
 	    	System.out.println(s);
 	    }
+		 List<Person> collect2 = customerData.stream().sorted((p1,p2)->p2.getName().compareTo(p1.getName())).collect(Collectors.toList());
 		
-		
+		System.out.println(collect2);
 	}
 
 }

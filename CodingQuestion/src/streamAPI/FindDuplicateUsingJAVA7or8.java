@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class FindDuplicateUsingJAVA7or8 {
 
@@ -23,9 +24,9 @@ public class FindDuplicateUsingJAVA7or8 {
 //		}
 		
 		// Java 8 approach 
-	    list.stream().filter(num->!st.add(num)).forEach(System.out::println);
+	    List<Integer> collect = list.stream().filter(num->!st.add(num)).collect(Collectors.toList());
 	    
-	     
+	     System.out.println(collect);
 		
 		
 	}
