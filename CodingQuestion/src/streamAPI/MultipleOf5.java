@@ -11,5 +11,7 @@ public class MultipleOf5 {
 		
 		ls.stream().filter(num->num%5==0).forEach(System.out::println);
 		
+		
+		
 	}
 }
