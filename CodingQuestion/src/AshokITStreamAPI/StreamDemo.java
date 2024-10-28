@@ -2,6 +2,7 @@ package AshokITStreamAPI;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -38,6 +39,16 @@ public class StreamDemo {
 		 List<Person> collect2 = customerData.stream().sorted((p1,p2)->p2.getName().compareTo(p1.getName())).collect(Collectors.toList());
 		
 		System.out.println(collect2);
-	}
+		
+	 Map<Integer, Long> collect3 = customerData.stream().collect(Collectors.groupingBy(Person::getAge , Collectors.counting()));
+		
+		System.out.println(collect3);
+	
+	
+       List<Person> collect4 = customerData.stream().collect(Collectors.filtering(Person -> Person.getAge()>23,Collectors.toList()));
+	
 
+       System.out.println(collect4);
+       
+}
 }
